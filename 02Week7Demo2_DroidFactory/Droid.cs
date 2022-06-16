@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 #endregion
 
-namespace _02Week7Demo1_DroidClass
+namespace W7_Demo_Classes1
 {
     class Droid
     {
@@ -23,6 +23,7 @@ namespace _02Week7Demo1_DroidClass
         public const int MaxDesignationLength = 8;
         public const int MinOwnerLength = 4;
 
+        public static List<Droid> droids = new List<Droid>();
         #endregion
 
         #region Properties
@@ -75,7 +76,6 @@ namespace _02Week7Demo1_DroidClass
             IsInService = false;
             PrimaryColor = Color.Gray;
             SecondaryColor = Color.Gray;
-            
         }
 
         public void SellDroid(string owner, bool isInService)
@@ -86,18 +86,26 @@ namespace _02Week7Demo1_DroidClass
         #endregion
 
         #region Static Methods
-        public static Droid FindDroid(string desgination)
+        public static Droid FindDroid(string designation)
         {
             Droid returnDroid = new Droid();
-
             // search for droid
+            foreach (Droid d in droids)
+            {
+                if (d.Designation == designation)
+                {
+                    return d;
+                }
+            }
+
             return returnDroid;
         }
 
-
         public static void CreateTestDroids()
         {
-
+            droids.Add(new Droid("C3P0", "Anakin Skywalker", true, Color.Gold, Color.Black));
+            droids.Add(new Droid("R2D2", "Obi-One Kinobi", true, Color.LightGray, Color.Blue));
+            droids.Add(new Droid("BB8", "Po Damarin", true, Color.White, Color.Orange));
         }
         #endregion
     }
