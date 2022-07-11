@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Week08_Demo2_MultipleForm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "W8_Collections", "Week9_Collections\W8_Collections.csproj", "{2B7D147E-0AD3-4E85-AC25-4FD8D160A1F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Week10_MultiFormEditor", "02Week10_MultiFormEditor\02Week10_MultiFormEditor.csproj", "{D9858095-23FE-4BB3-A98D-0E8882B74E63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{2B7D147E-0AD3-4E85-AC25-4FD8D160A1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B7D147E-0AD3-4E85-AC25-4FD8D160A1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B7D147E-0AD3-4E85-AC25-4FD8D160A1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9858095-23FE-4BB3-A98D-0E8882B74E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9858095-23FE-4BB3-A98D-0E8882B74E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9858095-23FE-4BB3-A98D-0E8882B74E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9858095-23FE-4BB3-A98D-0E8882B74E63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
