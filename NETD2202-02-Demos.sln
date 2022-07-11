@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Week7Demo1_DroidClass", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "W7_Demo_Classes1", "02Week7Demo2_DroidFactory\W7_Demo_Classes1.csproj", "{8E7571A9-F76F-4178-80D9-75FD8BEDC019}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Week08_Demo1_ClassesContinued", "02Week08_Demo1_ClassesContinued\02Week08_Demo1_ClassesContinued.csproj", "{10AE6E79-5462-4604-97D2-93580BCF6789}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Week08_Demo1_ClassesContinued", "02Week08_Demo1_ClassesContinued\02Week08_Demo1_ClassesContinued.csproj", "{10AE6E79-5462-4604-97D2-93580BCF6789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Week08_Demo2_MultipleForms", "02Week08_Demo2_MultipleForms\02Week08_Demo2_MultipleForms.csproj", "{355D20DE-6E8B-4C29-93C2-D12F11827934}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Week08_Demo2_MultipleForms", "02Week08_Demo2_MultipleForms\02Week08_Demo2_MultipleForms.csproj", "{355D20DE-6E8B-4C29-93C2-D12F11827934}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "W8_Collections", "Week9_Collections\W8_Collections.csproj", "{2B7D147E-0AD3-4E85-AC25-4FD8D160A1F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{355D20DE-6E8B-4C29-93C2-D12F11827934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{355D20DE-6E8B-4C29-93C2-D12F11827934}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{355D20DE-6E8B-4C29-93C2-D12F11827934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B7D147E-0AD3-4E85-AC25-4FD8D160A1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B7D147E-0AD3-4E85-AC25-4FD8D160A1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B7D147E-0AD3-4E85-AC25-4FD8D160A1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B7D147E-0AD3-4E85-AC25-4FD8D160A1F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
