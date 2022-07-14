@@ -17,15 +17,30 @@ namespace _02Week10_MultiFormEditor
             InitializeComponent();
         }
 
+        public Editor(int trooperID)
+        {
+            InitializeComponent();
+            TrooperID = trooperID;
+        }
+
         #region GLOBAL VARS
         List<String> Planets = new List<String>();
-
+        int TrooperID = 0;
         #endregion
 
         private void Editor_Load(object sender, EventArgs e)
         {
             PopulatePlanets();
             cboPlanets.DataSource = Planets;
+            if (TrooperID > 0) 
+            {
+                Trooper foundTrooper = Trooper.FindTrooper(TrooperID);
+                PopulateTrooper(foundTrooper);
+            } else
+            {
+                SetDefaults();
+            }
+            
         }
 
         private void PopulatePlanets()
@@ -67,8 +82,51 @@ namespace _02Week10_MultiFormEditor
         private void btnSave_Click(object sender, EventArgs e)
         {
             // do save stuff
+            Trooper trp = new Trooper();
+            trp.NickName = txtNickName.Text;
+            trp.Unit = txtUnit.Text;
+            trp.IsDefective = chkDefective.Checked;
+            trp.HairColor = lblHairColour.BackColor;
+            trp.EyeColor = lblEyeColour.BackColor;
+            trp.Born = dtpBorn.Value;
+            trp.HomeWorld = cboPlanets.SelectedValue.ToString();
+
+            if (TrooperID > 0)
+            {   // editting
+                trp.Designation = TrooperID;
+                Trooper foundTrooper = Trooper.FindTrooper(trp.Designation);
+                Trooper.troopers.Remove(foundTrooper);
+                Trooper.troopers.Add(trp);
+            } else
+            {   // adding
+                Trooper.troopers.Add(trp);
+            }
 
             this.Close();
+        }
+
+        private void btnSetHairColour_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            lblHairColour.BackColor = colorDialog1.Color;
+        }
+
+        private void btnSetEyeColour_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            lblEyeColour.BackColor = colorDialog1.Color;
+        }
+
+        private void PopulateTrooper(Trooper trp)
+        {
+            nudDesignation.Value = trp.Designation;
+            txtNickName.Text = trp.NickName;
+            txtUnit.Text = trp.Unit;
+            chkDefective.Checked = trp.IsDefective;
+            lblHairColour.BackColor = trp.HairColor;
+            lblEyeColour.BackColor = trp.EyeColor;
+            dtpBorn.Value = trp.Born;
+            cboPlanets.SelectedItem = trp.HomeWorld;
         }
     }
 }
